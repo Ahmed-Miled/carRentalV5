@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarRent - Location de véhicules</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+<body>
+  <div class="main-container">
+    <header>
+      <nav class="navv">
+        <a href="#" class="nom" title="CarRent">CarRent</a>
+        
+        <div class="search-container">
+          <form id="searchForm" class="search-form">
+            <div class="search-field">
+              <input type="text" placeholder="Rechercher véhicules..." name="query" required>
+              <button type="submit" title="Rechercher">
+                <span>🔍</span>
+              </button>
+            </div>
+            
+            <select name="sort" class="sort-select">
+              <option value="default">Trier par</option>
+              <option value="price_asc">Prix (bas → haut)</option>
+              <option value="price_desc">Prix (haut → bas)</option>
+              <option value="voiture">Voitures seulement</option>
+              <option value="velo">Vélos seulement</option>
+            </select>
+          </form>
+        </div>
+      
+        <ul>
+          <li><a href="index.html" class="active" title="Accueil">Accueil</a></li>
+          <li><a href="#" title="Contact">Contact</a></li>
+          <li><a href="#" title="À propos">À propos</a></li>
+          <li><a class="connexion" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" title="Connexion">Connexion</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Connexion</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Veuillez sélectionner votre rôle :</p>
+            <div class="d-grid gap-2">
+              <button class="btn btn-success" value="client">Client</button>
+              <button class="btn btn-success" value="admin">Propriétaire d'agence</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-container">
+      <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-img" style="background-image: url('../assets/img/nouveaute1.jpg');"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-img" style="background-image: url('../assets/img/v1.jpeg');"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-img" style="background-image: url('../assets/img/nouveaute2.jpg');"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-img" style="background-image: url('../assets/img/v2.avif');"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-img" style="background-image: url('../assets/img/nouveaute3.jpg');"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-img" style="background-image: url('../assets/img/v3.jpg');"></div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <section class="offers-section">
+      <h2 class="section-title">Découvrez nos Offres !</h2>
+      <p class="section-subtitle">Profitez de nos offres exceptionnelles sur une sélection de véhicules en promotion !</p>
+
+      <div class="cards-container" title="Dacia Sandero Stepway">
+        <div class="vehicle-card">
+          <img src="../assets/img/offer2.png" class="card-img" alt="Dacia Sandero Stepway" loading="lazy">
+          <div class="card-body">
+            <h3>Dacia Sandero Stepway</h3>
+            <p>Crossover urbain avec excellent rapport qualité-prix.</p>
+            <a href="#" class="btn btn-details" title="Details">Détails</a>
+          </div>
+        </div>
+
+        <div class="vehicle-card" title="Seat Ibiza">
+          <img src="../assets/img/offer3.png" class="card-img" alt="Seat Ibiza" loading="lazy">
+          <div class="card-body">
+            <h3>Seat Ibiza</h3>
+            <p>Citadine sportive avec technologies dernières générations.</p>
+            <a href="#" class="btn btn-details" title="Details">Détails</a>
+          </div>
+        </div>
+
+        <div class="vehicle-card" title="Hyundai i20">
+          <img src="../assets/img/offer4.png" class="card-img" alt="Hyundai i20" loading="lazy">
+          <div class="card-body">
+            <h3>Hyundai i20</h3>
+            <p>Citadine moderne alliant design élégant et confort optimal.</p>
+            <a href="#" class="btn btn-details" title="Details">Détails</a>
+          </div>
+        </div>
+      
+        <div class="vehicle-card" title="Swift Auto">
+          <img src="../assets/img/car5.webp" class="card-img" alt="Swift Auto" loading="lazy">
+          <div class="card-body">
+            <h3>Swift Auto</h3>
+            <p>Son profil abaissé et élargi, associé à des lignes dynamiques et sportives, attire tous les regards.</p>
+            <a href="#" class="btn btn-details" title="Details">Détails</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-more" title="Voir plus">Voir plus de véhicules</button>
+    </section>
+
+    <section class="offers-section">
+      <h2 class="section-title">Découvrez nos Offres !</h2>
+      <p class="section-subtitle">Profitez de nos offres exceptionnelles sur une sélection de vélos en promotion !</p>
+
+      <div class="cards-container" title="VÉLO BEST BIKE 26">
+        <div class="velo-card">
+          <img src="../assets/img/v4.jpg" class="card-img" alt="VÉLO BEST BIKE 26" loading="lazy">
+          <div class="card-body">
+            <h3>VÉLO BEST BIKE 26</h3>
+            <p>La bicyclette Best Bike 26" est construite autour d'un cadre en Platinum, offrant ainsi durabilité et résistance.</p>
+            <a href="#" class="btn btn-details" title="Details">Détails</a>
+          </div>
+        </div>
+
+        <div class="velo-card" title="TRQZNLEP Vélo">
+          <img src="../assets/img/v5.avif" class="card-img" alt="TRQZNLEP Vélo" loading="lazy">
+          <div class="card-body">
+            <h3>TRQZNLEP Vélo</h3>
+            <p>Transformez Facilement Votre Vélo En Vélo Électrique</p>
+            <a href="#" class="btn btn-details" title="Details">Détails</a>
+          </div>
+        </div>
+
+        <div class="velo-card" title="adulte tout-terrain">
+          <img src="../assets/img/v6.avif" class="card-img" alt="adulte tout-terrain" loading="lazy">
+          <div class="card-body">
+            <h3>Adulte tout-terrain</h3>
+            <p>vélo de route hommes femmes 26 pouces couteau roue vélo à vitesse Variable vtt vélo.</p>
+            <a href="#" class="btn btn-details" title="Details">Détails</a>
+          </div>
+        </div>
+      
+        <div class="velo-card" title="Vélos de Ville">
+          <img src="../assets/img/v7.avif" class="card-img" alt="Vélos de Ville" loading="lazy">
+          <div class="card-body">
+            <h3>Vélos de Ville</h3>
+            <p>Évadez-vous en ville grâce à nos vélos urbains (hollandais, fixie, longues distances), vélos électriques confortables, sûrs et équipés !</p>
+            <a href="#" class="btn btn-details" title="Details">Détails</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-more" title="Voir plus">Voir plus de vélos</button>
+    </section>
+
+    <div class="client-testimonials">
+      <h2 class="section-title">Ce que disent nos clients</h2>
+      
+      <div class="testimonials-grid">
+        <!-- Témoignage 1 -->
+        <div class="testimonial-card">
+          <div class="client-avatar">
+            <img src="../assets/img/personne1.jpg" alt="Photo de Tomas Lili" loading="lazy">
+          </div>
+          <blockquote>
+            "Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit."
+          </blockquote>
+          <div class="client-info">
+            <strong>Tomas Lili</strong>
+            <span>New York</span>
+          </div>
+        </div>
+    
+        <!-- Témoignage 2 -->
+        <div class="testimonial-card">
+          <div class="client-avatar">
+            <img src="../assets/img/personne2.jpg" alt="Photo de Romi Rain" loading="lazy">
+          </div>
+          <blockquote>
+            "Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit."
+          </blockquote>
+          <div class="client-info">
+            <strong>Romi Rain</strong>
+            <span>London</span>
+          </div>
+        </div>
+    
+        <!-- Témoignage 3 -->
+        <div class="testimonial-card">
+          <div class="client-avatar">
+            <img src="../assets/img/personne3.jpeg" alt="Photo de John Doe" loading="lazy">
+          </div>
+          <blockquote>
+            "Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit."
+          </blockquote>
+          <div class="client-info">
+            <strong>John Doe</strong>
+            <span>Washington</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <section class="map-section">
+      <h2 class="section-title">Nous trouver</h2>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18906.129712753736!2d6.722624160288201!3d60.12672284414915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463e997b1b6fc09d%3A0x6ee05405ec78a692!2sJ%C4%99zyk%20trola!5e0!3m2!1spl!2spl!4v1672239918130!5m2!1spl!2spl" 
+          class="map-iframe"
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localisation de notre agence">
+        </iframe>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Navigation</h3>
+          <a href="index.html">Accueil</a>
+          <a href="#">Véhicules</a>
+          <a href="#">Services</a>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <a href="tel:+33123456789">01 23 45 67 89</a>
+          <a href="mailto:contact@carrent.com">contact@carrent.com</a>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Légal</h3>
+          <a href="#">CGV</a>
+          <a href="#">Mentions légales</a>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        © 2025 CarRent - Tous droits réservés
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
